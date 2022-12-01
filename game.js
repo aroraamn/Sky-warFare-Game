@@ -33,10 +33,9 @@ const c = canvas.getContext('2d');
 canvas.width = window.innerWidth;  
 canvas.height = window.innerHeight;
 
-// canvas.style.background = "url('resource/bg.jpg')";
 
-c.fillStyle = "#171717";
-c.fillRect(0, 0, canvas.width, canvas.height);
+// c.fillStyle = "#171717";
+// c.fillRect(0, 0, canvas.width, canvas.height);
 
 const a=new Image();
 a.src='resource/jet-3.png';
@@ -153,7 +152,7 @@ function animate(){
 
 
     c.clearRect(0, 0, canvas.width, canvas.height);  
-    c.fillRect(0, 0, canvas.width, canvas.height);
+    // c.fillRect(0, 0, canvas.width, canvas.height);
 
     drawRotatedImage(a,pax,pay,anglea)
     drawRotatedImage(b,pbx,pby,angleb)

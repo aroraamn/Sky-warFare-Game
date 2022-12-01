@@ -14,6 +14,9 @@
 }
 body{
     background-color: black;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* skywarfare splash-screen */
@@ -35,34 +38,34 @@ body{
 
 /* Typewriter Effect */
 .name h4:nth-child(1){
-    animation: typewriter 1s calc(1s * 1 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 1 - 0.09s) forwards linear;
 }
 .name h4:nth-child(2){
-    animation: typewriter 1s calc(1s * 1.5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 2 - 0.09s) forwards linear;
 }
 .name h4:nth-child(3){
-    animation: typewriter 1s calc(1s * 2 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 3 - 0.09s) forwards linear;
 }
 .name h4:nth-child(4){
-    animation: typewriter 1s calc(1s * 2.5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 4 - 0.09s) forwards linear;
 }
 .name h4:nth-child(5){
-    animation: typewriter 1s calc(1s * 3 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 5 - 0.09s) forwards linear;
 }
 .name h4:nth-child(6){
-    animation: typewriter 1s calc(1s * 3.5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 6 - 0.09s) forwards linear;
 }
 .name h4:nth-child(7){
-    animation: typewriter 1s calc(1s * 4 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 7 - 0.09s) forwards linear;
 }
 .name h4:nth-child(8){
-    animation: typewriter 1s calc(1s * 4.5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 8 - 0.09s) forwards linear;
 }
 .name h4:nth-child(9){
-    animation: typewriter 1s calc(1s * 5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 9 - 0.09s) forwards linear;
 }
 .name h4:nth-child(10){
-    animation: typewriter 1s calc(1s * 5.5 - 0.09s) forwards linear;
+    animation: typewriter 0.01s calc(0.10s * 10 - 0.09s) forwards linear;
 }
 
 /* defining typewriter animation */
@@ -100,7 +103,7 @@ body{
 }
 .loginBox{
     height: 40vh;
-    width: 50vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,13 +111,40 @@ body{
     border: 2px solid white;
     border-radius: 10px;
 }
+#popup{
+    border: none;
+    background-image: url('moonbg.png');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+}
+.blackOverlay{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
 .loginBox h6{
     font-size: 2em;
+    text-align: center;
+}
+#copy{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 200;
+    color: #ff9fc2;
 }
 .loginBox button{
-    width: 40vw;
-    padding: 1vh;
-    margin-top: 1vh;
+    width: 100%;
+    padding: 2vh;
+    margin-top: 5vh;
     margin-bottom: 4px;
     border-radius: 10px;
     border: 2px solid white;
@@ -155,7 +185,7 @@ body{
 /* Slider Effect */
 .slider{
     transform: translateY(-100vh);
-    animation: slideDown 0.5s 7s forwards linear;
+    animation: slideDown 0.5s 3s forwards linear;
 }
 
 /* defining slideDown animation */
@@ -177,10 +207,10 @@ body{
     position: absolute;
     width: 100vw;
     height: 400vh;
-    top: 0; left: 0;                 /* precaution to make sure no gaps appear b/w top left corner of screen and image */
+    top: 0;
+    left: 0;
     z-index: -10;
-    
-    transform: translateY(-300vh);      /* To coincide bottom left corners of screen and image. */
+    transform: translateY(-300vh);
 }
 svg{
     transform: translateY(100vh);
@@ -224,7 +254,7 @@ svg{
     transform-origin: top center;
     /* Top two statements to bring the origin of the element to it's center from the top left corner */
     transform: rotate(55deg) scale(0.2);
-    animation: flyacross 15s 3.5s forwards linear;
+    animation: flyacross 4s 3.5s forwards linear;
 }
 @keyframes flyacross {
     to{
@@ -243,9 +273,30 @@ svg{
     .error{
         display: block;
         text-align: center;
+        width: 100vw;
+        height: 100vh;
         color: tomato;
         font-size: 1.5em;
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-weight: 600;
     }
+}
+
+
+#game-screen{
+    background-image: url('moonbg.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.score{
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    position: fixed;
+    display: flex;
+    margin-top:10px;
+}
+#b{
+    margin-left: 20px;
 }
